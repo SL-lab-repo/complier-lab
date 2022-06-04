@@ -21,7 +21,7 @@ extern bool success;    //语法正确标志
 
 void program();         //主程序
 void subProgram();      //子程序
-void consExplain();     //常量说明
+void constExplain();     //常量说明
 void varExplain();      //变量说明
 void proExplain();      //过程说明
 
@@ -38,7 +38,7 @@ void factor();          //因子
 void addOrSub();        //加减
 void mulOrDiv();        //乘除
 void relOp();           //关系运算
-void exp();             //表达式
+void expr();             //表达式
 void condition();       //条件
 
 void assignStmt();      //赋值语句

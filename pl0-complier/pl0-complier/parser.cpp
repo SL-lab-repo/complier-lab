@@ -40,7 +40,7 @@ void subProgram()
 
     //常量解析
     if (res[ind] == "const")
-        consExplain();
+        constExplain();
     
     //变量解析
     if (res[ind] == "var")
@@ -55,11 +55,11 @@ void subProgram()
 }
 
 //常量说明
-void consExplain()
+void constExplain()
 {
     if (res[ind] != "const")
     {
-        cout << "  consExplain error: mismatch keyword 'const'\n ";
+        cout << "  constExplain error: mismatch keyword 'const'\n ";
         exit(0);
     }
     
@@ -72,7 +72,7 @@ void consExplain()
     }
     
     if (res[ind] != ";"){
-        cout << "  consExplain error: mismatch the ';' in the end\n";
+        cout << "  constExplain error: mismatch the ';' in the end\n";
         exit(0);
     }
     
@@ -209,11 +209,11 @@ void assignStmt()
     }
     
     ++ind;
-    exp();
+    expr();
 }
 
 //表达式
-void exp()
+void expr()
 {
     if (res[ind] == "+" || res[ind] == "-")
         ++ind;
@@ -256,12 +256,12 @@ void condition()
 {
     if (res[ind] == "odd"){
         ++ind;
-        exp();
+        expr();
     }
     else{
-        exp();
+        expr();
         relOp();
-        exp();
+        expr();
     }
 }
 
@@ -284,7 +284,7 @@ void factor()
     else if ((res[ind].at(0) <= 57 && res[ind].at(0) >= 48))  //首字符是数字---无符号整数
         uInt();
     else if ((res[ind] == "(")){
-        exp();
+        expr();
         
         if (res[ind] != ")"){
             cout << "  factor error: lack ')'\n";
@@ -440,10 +440,10 @@ void writeStmt()
     }
     
     ++ind;
-    exp();
+    expr();
     while (res[ind] == ","){
         ++ind;
-        exp();
+        expr();
 
     }
     
