@@ -21,22 +21,28 @@ vector<string>  res;
 vector<string>  vars;
 
 // symbol table
-string symbol[32] =
-{
-    "nul","ident","number","plus","minus","times","slash","oddsym","eql","neq",
-    "lss","leq","gtr","geq","lparen","rparen","comma","semicolon","period","becomes",
-    "beginsym","endsym","ifsym","thensym","whilesym","writesym","readsym","dosym","callsym",
+string symbol[32] = {
+    "nul","ident","number","plus","minus","times",
+    "slash","oddsym","eql","neq",
+    "lss","leq","gtr","geq","lparen","rparen","comma","semicolon",
+    "period","becomes",
+    "beginsym","endsym","ifsym","thensym","whilesym","writesym",
+    "readsym","dosym","callsym",
     "constsym","varsym","programsym"
 };
 
 // delimiter and operator
-string op[16] = { ",",";",".","(",")","+","-","*","/","<",">",":=",">=","<=","#","=" };
+string op[16] = {
+    ",",";",".","(",")","+","-","*","/",
+    "<",">",":=",">=","<=","#","=" };
 
 // index of operator
 int op_index[16] = { 16,17,18,14,15,3,4,5,6,10,12,19,13,11,9,8 };
 
 // keywords
-string keyword[13] = {"begin","call","const","do","end","if","odd","procedure","read","then","var","while","write"};
+string keyword[13] = {
+    "begin","call","const","do","end","if","odd",
+    "procedure","read","then","var","while","write"};
 
 // index of keyword
 int keyword_index[13] = {20,28,29,27,21,22,7,31,26,23,30,24,25};
@@ -46,6 +52,7 @@ bool isNumber(char ch)
 {
     if (ch >= '0' && ch <= '9')
         return true;
+    
     return false;
 }
 
@@ -54,6 +61,7 @@ bool isLetter(char ch)
 {
     if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
         return true;
+    
     return false;
 }
 
@@ -62,6 +70,7 @@ bool isDelimiter(string word)
 {
     if (word[0] == ',' || word[0] == ';' || word[0] == '.' || word[0] == '(' || word[0] == ')')
         return true;
+    
     return false;
 }
 
@@ -70,6 +79,7 @@ bool isOperator(string word)
 {
     if (word[0] == '+' || word[0] == '-' || word[0] == '*' || word[0] == '/' || word[0] == '<' || word[0] == '>' || word == ":=" || word == ">=" || word == "<=" || word[0] == '#' || word[0] == '=')
         return true;
+    
     return false;
 }
 
@@ -84,6 +94,7 @@ bool isConst(string word)
         if (!isNumber(word[i]))   //不是数字
             return false;
     }
+    
     return true;
 }
 
@@ -95,6 +106,7 @@ int isKeyword(string word)
         if (word == keyword[i])
             return i;
     }
+    
     return -1;
 }
 
@@ -102,6 +114,10 @@ int isKeyword(string word)
 void printToken(string sym, string value)
 {
     cout << "    ( " << setw(11) << setiosflags(ios::left) << sym << setw(3) << "," << setw(11)<< setiosflags(ios::left) << value << " ) " << endl;
+}
+
+void consume(string& word){
+    word = "";
 }
 
 // 单词识别
@@ -140,7 +156,7 @@ void scan(string& word)
         }
     }
     
-    word = "";
+    consume(word);
 }
 
 void getSym() {

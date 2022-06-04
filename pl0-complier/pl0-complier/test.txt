@@ -25,4 +25,4 @@ begin
         call foo;
         write(m);
     end;
-end.
+end
