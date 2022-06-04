@@ -1,0 +1,28 @@
+var m, n, r, s, tmp;
+procedure foo;
+    begin
+        while r#0 do begin
+          s := n;
+          n := m;
+          m := n+s;
+          
+          r := r-1;
+        end;
+    end;
+
+begin
+    read(m);
+    read(n);
+
+    if m < n then begin
+        tmp := m;
+        m := n;
+        n := tmp;
+    end;
+
+    begin
+        r:=10;
+        call foo;
+        write(m);
+    end;
+end.

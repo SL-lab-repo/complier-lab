@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73762874284B2CD4001F5EEC /* parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73762872284B2CD4001F5EEC /* parser.cpp */; };
+		73762877284B3143001F5EEC /* lexer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73762875284B3143001F5EEC /* lexer.cpp */; };
 		73FF632C2845DF5600567A6E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73FF632B2845DF5600567A6E /* main.cpp */; };
-		73FF63402845DFDC00567A6E /* Word.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73FF63352845DFDC00567A6E /* Word.cpp */; };
-		73FF63412845DFDC00567A6E /* Num.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73FF63372845DFDC00567A6E /* Num.cpp */; };
-		73FF63422845DFDC00567A6E /* Real.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73FF63392845DFDC00567A6E /* Real.cpp */; };
-		73FF63432845DFDC00567A6E /* Lexer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73FF633C2845DFDC00567A6E /* Lexer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,18 +25,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		73762872284B2CD4001F5EEC /* parser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = parser.cpp; sourceTree = "<group>"; };
+		73762873284B2CD4001F5EEC /* parser.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = parser.hpp; sourceTree = "<group>"; };
+		73762875284B3143001F5EEC /* lexer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lexer.cpp; sourceTree = "<group>"; };
+		73762876284B3143001F5EEC /* lexer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = lexer.hpp; sourceTree = "<group>"; };
+		73762878284B3387001F5EEC /* test.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
 		73FF63282845DF5600567A6E /* pl0-complier */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "pl0-complier"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73FF632B2845DF5600567A6E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		73FF63352845DFDC00567A6E /* Word.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Word.cpp; sourceTree = "<group>"; };
-		73FF63362845DFDC00567A6E /* Token.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Token.hpp; sourceTree = "<group>"; };
-		73FF63372845DFDC00567A6E /* Num.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Num.cpp; sourceTree = "<group>"; };
-		73FF63382845DFDC00567A6E /* Real.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Real.hpp; sourceTree = "<group>"; };
-		73FF63392845DFDC00567A6E /* Real.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Real.cpp; sourceTree = "<group>"; };
-		73FF633A2845DFDC00567A6E /* Word.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Word.hpp; sourceTree = "<group>"; };
-		73FF633B2845DFDC00567A6E /* Num.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Num.hpp; sourceTree = "<group>"; };
-		73FF633C2845DFDC00567A6E /* Lexer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Lexer.cpp; sourceTree = "<group>"; };
-		73FF633D2845DFDC00567A6E /* Lexer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Lexer.hpp; sourceTree = "<group>"; };
-		73FF633F2845DFDC00567A6E /* symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = symbol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,51 +64,14 @@
 		73FF632A2845DF5600567A6E /* pl0-complier */ = {
 			isa = PBXGroup;
 			children = (
-				73FF63332845DFDC00567A6E /* lexer */,
-				73FF63322845DFDC00567A6E /* parser */,
-				73FF633E2845DFDC00567A6E /* symbol */,
 				73FF632B2845DF5600567A6E /* main.cpp */,
+				73762872284B2CD4001F5EEC /* parser.cpp */,
+				73762873284B2CD4001F5EEC /* parser.hpp */,
+				73762875284B3143001F5EEC /* lexer.cpp */,
+				73762876284B3143001F5EEC /* lexer.hpp */,
+				73762878284B3387001F5EEC /* test.txt */,
 			);
 			path = "pl0-complier";
-			sourceTree = "<group>";
-		};
-		73FF63322845DFDC00567A6E /* parser */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = parser;
-			sourceTree = "<group>";
-		};
-		73FF63332845DFDC00567A6E /* lexer */ = {
-			isa = PBXGroup;
-			children = (
-				73FF63342845DFDC00567A6E /* meta */,
-				73FF633C2845DFDC00567A6E /* Lexer.cpp */,
-				73FF633D2845DFDC00567A6E /* Lexer.hpp */,
-			);
-			path = lexer;
-			sourceTree = "<group>";
-		};
-		73FF63342845DFDC00567A6E /* meta */ = {
-			isa = PBXGroup;
-			children = (
-				73FF63352845DFDC00567A6E /* Word.cpp */,
-				73FF63362845DFDC00567A6E /* Token.hpp */,
-				73FF63372845DFDC00567A6E /* Num.cpp */,
-				73FF63382845DFDC00567A6E /* Real.hpp */,
-				73FF63392845DFDC00567A6E /* Real.cpp */,
-				73FF633A2845DFDC00567A6E /* Word.hpp */,
-				73FF633B2845DFDC00567A6E /* Num.hpp */,
-			);
-			path = meta;
-			sourceTree = "<group>";
-		};
-		73FF633E2845DFDC00567A6E /* symbol */ = {
-			isa = PBXGroup;
-			children = (
-				73FF633F2845DFDC00567A6E /* symbol.h */,
-			);
-			path = symbol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,11 +131,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73FF63412845DFDC00567A6E /* Num.cpp in Sources */,
-				73FF63422845DFDC00567A6E /* Real.cpp in Sources */,
+				73762874284B2CD4001F5EEC /* parser.cpp in Sources */,
 				73FF632C2845DF5600567A6E /* main.cpp in Sources */,
-				73FF63402845DFDC00567A6E /* Word.cpp in Sources */,
-				73FF63432845DFDC00567A6E /* Lexer.cpp in Sources */,
+				73762877284B3143001F5EEC /* lexer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
